@@ -130,4 +130,5 @@ def add_time(start, duration, starting_day = ''):
     
     return new_time
 
+#add the time you want to calculate
 print(add_time('11:59 PM', '24:05', 'Wednesday'))
