@@ -1,7 +1,9 @@
 # change the "NUMBER_OF_DISKS" variable to solve the puzzle you need
 NUMBER_OF_DISKS = 5
+
 # the A variable is a list in the range [1, NUMBER_OF_DISKS], but in reverse order
 A = list(range(NUMBER_OF_DISKS, 0, -1))
+
 # the variables B and C are empty because thats how this puzzle works
 B = []
 C = []
