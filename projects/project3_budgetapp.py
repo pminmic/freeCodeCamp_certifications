@@ -7,9 +7,7 @@ class Category:
         self.used_defs = {}
 
     def check_funds(self, amount):
-        if self.balance > amount:
-            return True
-        return False
+        return self.balance > amount
     
     def deposit(self, amount, description = ""):
         amount = f"{amount:.2f}"
@@ -70,7 +68,36 @@ class Category:
 
 def create_spend_chart(categories):
     str_chart = 'Percentage spent by category' + '\n'
+    total_balance = 0
+    num_categories = 0
+    for category in categories:
+        total_balance += category.balance
+        num_categories += 1
+    
+    num_percentage = 100
+    
+    while num_percentage >= 0:
+        if num_percentage < 100 and num_percentage > 0:
+            str_chart += ' '
+        elif num_percentage == 0:
+            str_chart += '  '
+        
+        str_chart += str(num_percentage) + "|"
+        for category in categories:
+            if num_percentage <= round((100 * category.balance)/ total_balance, -1):
+                str_chart += ' o '
+            else:
+                str_chart += '   '
+        str_chart += '\n'
+        num_percentage -= 10
+    
+    str_chart += 4 * ' ' + (num_categories * 3) * '-' + '-'
 
+        
+
+
+    
+    return str_chart
 
 food = Category('Food')
 food.deposit(1000, 'deposit')
@@ -78,4 +105,4 @@ food.withdraw(10.15, 'groceries')
 food.withdraw(15.89, 'restaurant and more food for dessert')
 clothing = Category('Clothing')
 food.transfer(50, clothing)
-print(food) 
+print(create_spend_chart([food, clothing])) 
