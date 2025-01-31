@@ -5,21 +5,17 @@ class Category:
         self.balance = 0
         self.ledger = []
         self.used_defs = {}
+        self.withdrawed = 0
 
     def check_funds(self, amount):
-        return self.balance > amount
+        return self.balance >= amount
     
     def deposit(self, amount, description = ""):
         amount = f"{amount:.2f}"
         self.ledger.append({'amount': float(amount), 'description': description})
         self.balance += float(amount)
         first_deposit = 0
-        str_deposit = ''
-        if description == 'deposit' and first_deposit == 0:
-            str_deposit += 'initial deposit'
-            first_deposit += 1
-        else:
-            str_deposit += description
+        str_deposit = description
         
         spaces = 30 - len(str_deposit) - len(amount)
         
@@ -31,6 +27,7 @@ class Category:
     def withdraw(self, amount, description = ""):
         if self.check_funds(amount):
             self.balance -= amount
+            self.withdrawed -= amount
             amount = f"{amount:.2f}"
             self.ledger.append({'amount': float("-" + f"{amount}"), 'description': description})
             if len(description) > 29 - len(amount):
@@ -64,16 +61,17 @@ class Category:
     
         return category_name 
 
-    
 
 def create_spend_chart(categories):
     str_chart = 'Percentage spent by category' + '\n'
-    total_balance = 0
+    total_withdrawed = 0
     num_categories = 0
+    longest_name = 0
     for category in categories:
-        total_balance += category.balance
+        total_withdrawed += category.withdrawed
         num_categories += 1
-    
+        if len(category.name) > longest_name:
+            longest_name = len(category.name)
     num_percentage = 100
     
     while num_percentage >= 0:
@@ -83,26 +81,29 @@ def create_spend_chart(categories):
             str_chart += '  '
         
         str_chart += str(num_percentage) + "|"
+        
         for category in categories:
-            if num_percentage <= round((100 * category.balance)/ total_balance, -1):
+            if num_categories == 1:
                 str_chart += ' o '
+
+            elif num_percentage <= (100 * category.withdrawed /  total_withdrawed) // 10 * 10:
+                str_chart += ' o '
+
             else:
                 str_chart += '   '
-        str_chart += '\n'
+        str_chart += ' ' + '\n'
         num_percentage -= 10
     
-    str_chart += 4 * ' ' + (num_categories * 3) * '-' + '-'
-
-        
-
-
+    str_chart += 4 * ' ' + (num_categories * 3) * '-' + '-\n' + '    '
     
+    for rows in range(0, longest_name):
+        for i in range(0, num_categories):
+            if len(categories[i].name) > rows:
+                str_chart += ' ' + categories[i].name[rows] + ' '
+            else:
+                str_chart += '   '
+            if i == num_categories - 1 and rows != longest_name -1:
+                str_chart += ' ' + '\n' + 4 * ' '
+    str_chart += ' '
     return str_chart
 
-food = Category('Food')
-food.deposit(1000, 'deposit')
-food.withdraw(10.15, 'groceries')
-food.withdraw(15.89, 'restaurant and more food for dessert')
-clothing = Category('Clothing')
-food.transfer(50, clothing)
-print(create_spend_chart([food, clothing])) 
