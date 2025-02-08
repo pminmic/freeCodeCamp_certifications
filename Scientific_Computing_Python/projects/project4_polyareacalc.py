@@ -1,13 +1,21 @@
 class Rectangle:
+    type = 'Rectangle'
+
     def __init__(self, width, height):
         self.width = width
         self.height = height
 
     def set_width(self, width):
         self.width = width
+        if self.type == 'Square':
+            self.height = width
+            self.side = width
 
     def set_height(self, height):
         self.height = height
+        if self.type == 'Square':
+            self.side = height
+            self.width = height
 
     def get_area(self):
         return self.width * self.height
@@ -29,21 +37,30 @@ class Rectangle:
             picture += '\n'
         return picture
 
-    def get_amount_inside():
-        pass
+    def get_amount_inside(self, other):
+        if self.get_area() < other.get_area():
+            return 0
+        return (self.get_area() // other.get_area())
 
-    def __repr__(self): 
+    def __repr__(self):
         arg_list = [f'{key}={val}' for key, val in vars(self).items()]
-        args = ', '.join(arg_list)
+        if self.type == 'Rectangle':
+            args = ', '.join(arg_list)
+        else:
+            args = arg_list[0]
         return f'{self.__class__.__name__}({args})'
+        
  
 
 class Square(Rectangle):
+    type = 'Square'
+
     def __init__(self, side):
         self.side = side
+        super().__init__(side, side)
 
     def set_side(self, side):
         self.side = side
+        self.width = side
+        self.height = side
 
-r1 = Rectangle(3, 6)
-print(r1.get_diagonal())
