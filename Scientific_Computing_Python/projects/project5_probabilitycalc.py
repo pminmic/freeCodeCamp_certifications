@@ -16,32 +16,41 @@ class Hat:
     def draw(self, num):
         res = []
         if len(self.contents) < num:
-            return self.contents
+            aux = self.contents
+            self.contents = []
+            return aux
+
         for i in range(num):
-            value = int(random.random() * len(self.contents))
-            res.append(self.contents[value])
-            #self.kwargs[self.contents[value]] -= 1
-            self.contents.pop(value)
+            value = random.choice(self.contents)
+            res.append(value)
+            self.kwargs[value] -= 1
+            self.contents.remove(value)
         return res
 
 def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
     count = 0
+    
     for i in range(num_experiments):
         hat_two = copy.deepcopy(hat)
         expected = copy.deepcopy(expected_balls)
         drawn = hat_two.draw(num_balls_drawn)
 
-        for color in expected:
+        for color in drawn:
             if color in expected:
-                expected[color] -= 1
+                if expected[color] > 0:
+                    expected[color] -= 1
 
-        if (all(value == 0 for value in expected.values())):
+        
+        if all([value == 0 for value in expected.values()]):
             count += 1
-    
+            
     return count / num_experiments
 
-hat = Hat(blue=3,red=2,green=6)
-probability = experiment(hat=hat, expected_balls={"blue":2,"green":1}, num_balls_drawn=4, num_experiments=1000)
-print(probability)
+hat = Hat(black=6, red=4, green=3)
+probability = experiment(hat=hat,
+                  expected_balls={'red':2,'green':1},
+                  num_balls_drawn=5,
+                  num_experiments=2000)
+print(probability)     
 
 
