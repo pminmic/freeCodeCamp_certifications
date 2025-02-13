@@ -6,7 +6,7 @@ class Hat:
         self.kwargs = kwargs
         if len(self.kwargs) == 0:
             raise AttributeError(
-                f"Cannot create '{cls.__name__}' class: there are no balls in the hat!!!"
+                f"Cannot create '{__class__.__name__}' class: there are no balls in the hat!!!"
             )
         self.contents = []
         for key, value in self.kwargs.items():
