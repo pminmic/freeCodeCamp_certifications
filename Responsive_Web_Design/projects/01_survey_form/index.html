@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <meta charset="uft-8">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1 id="title">Today's work and productivity</h1>
+      <p id="description">This is a daily form to register how productive and how are you feeling about your work.</p>
+      <form id="survey-form">
+        <fieldset>
+            <label id="name-label" for="name">Enter your Name:<input required id="name" name="name" type="text" placeholder="Manolo"></label>
+            <label id="email-label" for="email">Enter your Email:<input required id="email" name="email" type="email" placeholder="manolo@email.com"></label>
+            <label id="number-label" for="number">Enter your Age (optional):<input id="number" type="number" min="3" max="120" name="age" placeholder="45"></label>
+        </fieldset>
+        <fieldset>
+            <legend><strong>How productive I felt today? (required)</strong></legend>
+            <label for="productive"><input type="radio" value="productive" id="productive" name="productivity" checked />Productive</label>
+            <label for="not-productive"><input type="radio" value="not-productive" id="not-productive" name="productivity" />Not Productive</label>
+        </fieldset>
+        <fieldset>
+            <legend><strong>What things I did today?</strong></legend>
+            <label for="meditate">
+                <input type="checkbox" name="today-things" id="meditate" value="meditate">Meditate
+            </label>
+            <label for="gym">
+                <input type="checkbox" name="today-things" id="gym" value="gym">Gym
+            </label>
+            <label for="study">
+                <input type="checkbox" name="today-things" id="study" value="study">Study
+            </label>
+            <label for="exercise">
+                <input type="checkbox" name="today-things" id="exercise" value="exercise">Exercise
+            </label>
+            <label for="writing">
+                <input type="checkbox" name="today-things" id="writing" value="writing">Writing
+            </label>
+            <label for="reading">
+                <input type="checkbox" name="today-things" id="reading" value="reading">Reading
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="dropdown"><strong>I felt today studying/working?</strong>
+                <select id="dropdown" name="feeling" required>
+                    <option value="">(select one)</option>
+                    <option value="1">Very bad</option>
+                    <option value="2">Bad</option>
+                    <option value="3">Normal</option>
+                    <option value="4">Good</option>
+                    <option value="5">Very good</option>
+                </select>
+            </label>
+            <label for="more-info">Have you done something different today? (optional)
+                <textarea id="more-info" name="more-info" rows="3" cols="30" placeholder="Today I saw a unicorn!!!"></textarea>
+            </label>
+        </fieldset>
+        <input type="submit" value="Submit" id="submit" />
+      </form>
+    </main>
+  </body>
+</html>

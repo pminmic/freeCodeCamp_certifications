@@ -1,0 +1,75 @@
+body {
+    background-color: #F8F3D9;
+    font-family: 'Courier New', Courier, monospace;
+    color: #504B38;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+}
+
+h1, p {
+    text-align: center;
+    margin: 1em auto;
+}
+
+form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+label {
+    display: block;
+    
+    margin: 0.5rem 0;
+}
+
+fieldset {
+    border-color: #B9B28A;
+    margin: 15px;
+    background-color: #EBE5C2;
+}
+
+input[type="text"], input[type="email"], input[type="number"], textarea {
+    background-color: #F8F3D9;
+    color: #504B38;
+}
+
+select {
+    border-color: #B9B28A;
+    background-color: #F8F3D9;
+    color: #504B38;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #EBE5C2;
+    border-color: #B9B28A;
+    min-width: 300px;
+    color: #504B38;
+}
+
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+    accent-color: #b9b28a;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+textarea {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+    align-self: center;
+}
