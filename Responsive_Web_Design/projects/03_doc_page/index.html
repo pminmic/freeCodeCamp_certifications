@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Documentation Page</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Python Documentation</header>
+      <ul>
+        <li><a class="nav-link" href=#introduction>Introduction</a></li>
+        <li><a class="nav-link" href=#basic_concepts_of_python>Basic Concepts of Python</a></li>
+        <li><a class="nav-link" href=#control_structures_and_functions>Control Structures and Functions</a></li>
+        <li><a class="nav-link" href=#libraries_and_common_tools>Libraries and Common Tools</a></li>
+        <li><a class="nav-link" href=#reference>Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="introduction" class="main-section">
+            <header>Introduction</header>
+            <article>
+                <p>Python is a high-level, interpreted programming language known for its simplicity and readability. Developed in the late 1980s by Guido van Rossum, Python has become one of the most popular programming languages in the world due to its versatility and wide range of applications. It is used in fields such as web development, data science, artificial intelligence, automation, and more.</p>
+                <p>Python’s clean syntax and dynamic typing make it an excellent choice for beginners, while its powerful libraries and frameworks also make it suitable for advanced programmers. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming, making it a flexible tool for a wide variety of tasks.</p>
+                <p>Some of Python’s key features include:</p>
+                <ul>
+                    <li><strong>Readable and concise syntax:</strong> Python’s syntax is designed to be easy to understand and write, making it ideal for newcomers to programming.</li>
+                    <li><strong>Extensive libraries and frameworks:</strong> Python’s large standard library, as well as external libraries, provide pre-built solutions for various tasks.</li>
+                    <li><strong>Cross-platform compatibility:</strong> Python runs on various operating systems, including Windows, macOS, and Linux, allowing for broad application development.</li>
+                    <li><strong>Community support:</strong> Python has a large and active community, which means there are abundant resources, tutorials, and forums available for learning and troubleshooting.</li>
+                </ul>
+                <p>Whether you're building a simple script, analyzing data, or developing complex web applications, Python offers the tools and flexibility to get the job done efficiently.</p>
+          </article>    
+        </section>
+        <section id="basic_concepts_of_python" class="main-section">
+            <header>Basic Concepts of Python</header>
+            <article>
+                <p>Python is known for its simple and easy-to-understand syntax, making it one of the best programming languages for beginners. In this section, we’ll cover the essential building blocks of Python, including data types, variables, operators, and basic syntax.</p>
+                <h2>1. Variables and Data Types</h2>
+                <p>In Python, variables are used to store values. These values can be of different data types, such as numbers, strings, lists, and more. Python is dynamically typed, meaning you don’t have to declare the type of a variable explicitly.</p>
+                <p>Some of the common data types in Python are:</p>
+                <ul>
+                    <li><strong>Integers</strong> or <kbd>int</kbd> (Whole numbers)</li>
+                    <li><strong>Floating-point numbers</strong> or <kbd>float</kbd> (Numbers with decimal point)</li>
+                    <li><strong>Strings</strong> or <kbd>str</kbd> (A sequence of characters)</li>
+                    <li><strong>Booleans</strong> or <kbd>bool</kbd> (Represents True of False)</li>
+                </ul>
+                <p>Example:</p>
+                <pre>
+                    <code>age = 25          # int
+                        height = 5.9      # float
+                        name = "Alice"    # str
+                        is_student = True # bool
+                    </code>
+                </pre>
+                <h2>2. Operators</h2>
+                <p>Operators allow you to perform operations on variables and values. Python supports a variety of operators for arithmetic, comparison, logical, and more.</p>
+                <ul>
+                    <li>
+                        <strong>Arithmetic Operators:</strong> <kbd>+</kbd>, <kbd>-</kbd>, <kdb>*</kdb>, <kbd>/</kbd>, <kbd>//</kbd> (floor division), <kbd>%</kbd> (modulus), <kbd>**</kbd> (exponentiation).
+                        <p>Example:</p>
+                        <pre><code>x = 10
+                        y = 5
+                        sum = x + y      # 15
+                        product = x * y  # 50
+                        </code></pre>
+                    </li>
+                    <li>
+                        <strong>Comparison Operators:</strong> <kbd>==</kbd>, <kbd>!=</kbd>, <kbd>&lt;</kbd>, <kbd>&gt;</kbd>, <kbd>&lt;=</kbd>, <kbd>&gt;=</kbd>.
+                        <p>Example:</p>
+                        <pre><code>10 == 10   # True
+                        5 != 3     # True
+                        </code></pre>
+                    </li>
+                    <li>
+                        <strong>Logical Operators:</strong> and, or, not.
+                        <p>Example:</p>
+                        <pre><code>True and False   # False
+                        not True         # False
+                        </code></pre>
+                    </li>
+                </ul>
+                <h2>3. Comments</h2>
+                <p>Comments are used to explain code and make it more readable. In Python, comments start with a <kbd>#</kbd> symbol for single-line comments, or can be enclosed in triple quotes for multi-line comments.</p>
+                <p>Example:</p>
+                <pre><code># This is a single-line comment
+                x = 10  # Assigning value to variable
+                </code></pre>
+                <p>Multi-line comments can be written using triple quotes:</p>
+                <pre><code>"""
+                This is a multi-line comment.
+                You can write multiple lines of explanation here.
+                """
+                </code></pre>
+                <h2>4. Basic Input/Output</h2>
+                <p>Python provides simple functions for interacting with users and displaying information.</p>
+                <ul>
+                    <li>
+                        <strong>Input</strong>: The <kbd>input()</kbd> function is used to get data from the user.
+                        <p>Example:</p>
+                        <pre><code>name = input("Enter your name: ")
+                        print("Hello, " + name + "!")
+                        </code></pre>
+                    </li>
+                    <li>
+                        <strong>Output</strong>: The <kbd>print()</kbd> function is used to display information to the console.
+                        <p>Example:</p>
+                        <pre><code>print("Welcome to Python programming!")
+                        </code></pre>
+                    </li>
+                </ul>
+            </article>
+            <p>This section lays the foundation for understanding how to write basic Python code. Once you are familiar with variables, data types, and operators, you can move on to more complex topics like control flow and functions.</p>
+        </section>
+        <section id="control_structures_and_functions" class="main-section">
+            <header>Control Structures and Functions</header>
+            <article>
+                <p>Python offers several control structures that help manage the flow of your program. These structures include conditionals, loops, and functions.</p>
+                <h2>1. Conditionals</h2>
+                <p>Conditionals allow you to make decisions in your code based on certain conditions using <kbd>if</kbd>, <kbd>elif</kbd>, and <kbd>else</kbd>.</p>
+                <p>Example:</p>
+                <pre><code>age = 18
+                if age >= 18:
+                    print("You are an adult.")
+                else:
+                    print("You are a minor.")
+                </code></pre>
+                <h2>2. Loops</h2>
+                <p>Loops allow you to repeat actions multiple times. The most common loops in Python are <kbd>for</kbd> and <kbd>while</kbd>.</p>
+                <ul>
+                    <li>
+                        <strong><kbd>for</kbd> loop</strong>: Used to iterate over a sequence (like a list or string).
+                        <p>Example:</p>
+                        <pre><code>for i in range(5):
+                            print(i) # Prints numbers 0 to 4
+                        </code></pre>
+                    </li>
+                    <li>
+                        <strong><kbd>while</kbd> loop</strong>: Repeats as long as a condition is <kbd>True</kbd>.
+                        <p>Example:</p>
+                        <pre><code>count = 0
+                        while count < 5:
+                            print(count)
+                            count += 1 # Increments count by 1
+                        </code></pre>
+                    </li>
+                </ul>
+                <h2>3. Functions</h2>
+                <p>Functions are reusable blocks of code that perform a specific task. You define a function using the <kbd>def</kbd> keyword.</p>
+                <p>Example:</p>
+                <pre><code>def greet(name):
+                    print("Hello, " + name + "!")
+                greet("Alice") # Calls the function with "Alice" as an argument
+                </code></pre>
+                <p>Functions can also return values using the <kbd>return</kbd> statement.</p>
+                <p>Example:</p>
+                <pre><code>def add(a, b):
+                    return a + b
+                result = add(5, 3) # Calls the function and stores the result
+                print(result) # Prints 8
+                </code></pre>
+            </article>
+            <p>This section introduces the basic building blocks of control flow and functions. With these tools, you can create dynamic, efficient Python programs.</p>
+        </section>
+        <section id="libraries_and_common_tools" class="main-section">
+            <header>Libraries and Common Tools</header>
+            <p>Python has a rich ecosystem of libraries and tools that support development across various domains. Some of the most commonly used are:</p>
+            <ul>
+                <li>
+                    <strong>NumPy</strong>: Numerical computing and array manipulation.                    
+                </li>
+                <li>
+                    <strong>Pandas</strong>: Data analysis and manipulation.
+                </li>
+                <li>
+                    <strong>Matplotlib / Seaborn</strong>: Data visualization.
+                </li>
+                <li>
+                    <strong>Requests</strong>: Simplified HTTP requests.
+                </li>
+                <li>
+                    <strong>Flask / Django</strong>: Web application develepment.
+                </li>
+                <li>
+                    <strong>pytest</strong>: Framework for autmated testing.
+                </li>
+                <li>
+                    <strong>virtualenv / venv</strong>: Virtual enviroments for dependency isolation.
+                </li>
+                <li>
+                    <strong>pip</strong>: Package installation and management.
+                </li>
+                <li>
+                    <strong>Jupyter Notebook</strong>: Interactive enviroment for data exploration and exerimentation.
+                </li>
+            </li>
+            <p>These tools enable efficient workflows in data science, web development, automation, testing, and more.</p>
+        </section>
+        <section id="reference" class="main-section">
+            <header>Reference</header>
+            <ul>
+                <li>All this info was collected from the <a href="https://docs.python.org/3/">Official Python Documentation Page</a> and with a little help from <a href="https://chatgpt.com">ChatGPT</a>.</ul>
+            </ul>
+        </section>
+    </main>
+  </body>
+</html>
