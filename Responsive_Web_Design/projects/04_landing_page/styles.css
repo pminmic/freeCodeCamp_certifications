@@ -1,0 +1,152 @@
+:root {
+  --header: #339999;
+  --footer: #99a66d;
+  --background: #a9bd68;
+  --text1: #b5cc6a;
+  --text2: #c0de5d;
+}
+
+html {
+  font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  background: var(--header);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  border-bottom: 1px solid #000;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text1);
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.left-center {
+  width: 100%;
+  display: flex;
+  font-size: 14px;
+  flex-direction: row;
+  align-items: space-between;
+  
+}
+
+.title, .sub-title {
+  /*border: 1px solid;*/
+  color: var(--text1);
+}
+
+#nav-bar {
+  top: 0;
+  left: 0;
+
+}
+
+.right ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  padding: auto;
+  /*border: 1px solid;*/
+  
+}
+
+.right li {
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#header-img {
+  width: 75px;
+  height: 75px;
+  margin: auto;
+}
+
+main {
+    padding-top: calc(75px + 40px);
+}
+
+main, footer {
+  padding: 0 10px;
+  text-align: justify;
+}
+
+#hero {
+    padding-top: 160px;
+  text-align: center;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+#email {
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#video {
+  width: 80%;        /* Ajusta el ancho (ejemplo 80% del contenedor) */
+  max-width: 560px;  /* No más grande que el tamaño típico */
+  height: 315px;     /* Mantén proporción estándar */
+  display: block;
+  margin: 0 auto;
+}
+
+
+footer {
+  background: var(--footer);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+      background: var(--header);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      border-bottom: 1px solid #000;
+    }
+
+    .right ul{
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      padding: auto;
+    }
+
+    .right li {
+      padding: 20px;
+      margin: 0 auto;
+    }
+    
+    
+}
