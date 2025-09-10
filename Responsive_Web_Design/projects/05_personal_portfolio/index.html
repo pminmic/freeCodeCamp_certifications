@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#welcome-section">Sobre mi</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+      <section id="welcome-section" class="welcome-section">
+        <h1>¡Hola, mi nombre es Pau!</h1>
+        <p>
+          Soy estudiante en la Univesitat Politécnica de Valencia (UPV).
+        </p>
+        <p>
+          Me gusta mucho programar y aprender nuevas cosas.
+        </p>
+      </section>
+      <section id="projects" class="projects">
+        <h2>Estos son mis proyectos</h2>
+        <div class="project-row">
+          <div class="project-tile">
+            <a rel="" href="">
+              <img alt="Python Logo" src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" />
+            </a>
+            <figcaption>Certificaciones de freeCodeCamp</figcaption>
+          </div>
+          <div class="project-tile">
+            <a rel="gestor_biblioteca_java" href="https://github.com/pminmic/gestor_biblioteca_java">
+              <img alt="Java Logo" src="https://www.vectorlogo.zone/logos/java/java-icon.svg" />
+            </a>
+            <figcaption>Simulador de sistema de biblioteca</figcaption>
+          </div>
+          <div class="project-tile">
+            <a rel="Notas-PAU-CV" href="https://github.com/JavierRibaldelRio/Notas-PAU-CV">
+              <img alt="R Logo" src="https://www.r-project.org/logo/Rlogo.svg" />
+            </a>
+            <figcaption>Estudio estadístico de las notas de la PAU</figcaption>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="contact-header">
+          <h2>¿Quieres hacer un proyecto conmigo?</h2>
+          <p>¡¡¡Contacta conmigo a través de mis redes sociales!!!</p>
+        </div>
+        <div class="contact-links">
+          <a 
+            id="profile-link" 
+            href="https://github.com/pminmic" 
+            target="_blank" 
+            class="btn contact-details">
+            <i class="fab fa-github"></i> GitHub  
+          </a>
+          <a 
+            href="mailto:example@example.com" 
+            class="btn contact-details">
+            <i class="fas fa-at"></i> Send a mail
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
